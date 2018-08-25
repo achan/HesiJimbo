@@ -1,0 +1,2 @@
+protocol ImmutableStruct { }
+protocol AutoEquatable { }

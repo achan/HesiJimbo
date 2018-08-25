@@ -1,0 +1,15 @@
+import Foundation
+
+{% for struct in types.structs where struct.implements.ImmutableStruct %}
+{{ struct.accessLevel }} extension {{ struct.name }} {
+  {% for variable in struct.variables where not variable.isMutable %}
+  func {{variable.name}}(_ {{variable.name}}: {{variable.typeName}}) -> {{struct.name}} {
+    return {{struct.name}}(
+      {% for param in struct.variables where not param.isMutable %}
+      {{param.name}}: {% if variable.name != param.name %}self.{% endif %}{{param.name}}{% if not forloop.last %},{% endif %}
+      {% endfor %}
+    )
+  }
+  {% endfor %}
+}
+{% endfor %}

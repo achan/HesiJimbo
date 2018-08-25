@@ -15,6 +15,14 @@
 		8CCEE7EB213076EE007B6261 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CCEE7E9213076EE007B6261 /* LaunchScreen.storyboard */; };
 		8CCEE7F6213076EF007B6261 /* HesiJimboTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCEE7F5213076EF007B6261 /* HesiJimboTests.swift */; };
 		8CCEE801213076EF007B6261 /* HesiJimboUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCEE800213076EF007B6261 /* HesiJimboUITests.swift */; };
+		8CCEE8102130804C007B6261 /* ReSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CCEE80F2130804C007B6261 /* ReSwift.framework */; };
+		8CCEE81421308268007B6261 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCEE81321308268007B6261 /* Store.swift */; };
+		8CCEE817213084B4007B6261 /* NewsReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCEE816213084B4007B6261 /* NewsReducer.swift */; };
+		8CCEE81D21308C7C007B6261 /* ImmutableStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCEE81C21308C7C007B6261 /* ImmutableStruct.swift */; };
+		8CCEE81F21309463007B6261 /* ImmutableStruct.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCEE81E21309463007B6261 /* ImmutableStruct.generated.swift */; };
+		8CCEE82121309646007B6261 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCEE82021309646007B6261 /* News.swift */; };
+		8CCEE82321309A86007B6261 /* NewsReducerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCEE82221309A86007B6261 /* NewsReducerTests.swift */; };
+		8CCEE82521309D9E007B6261 /* AutoEquatable.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCEE82421309D9E007B6261 /* AutoEquatable.generated.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +57,14 @@
 		8CCEE7FC213076EF007B6261 /* HesiJimboUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HesiJimboUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CCEE800213076EF007B6261 /* HesiJimboUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HesiJimboUITests.swift; sourceTree = "<group>"; };
 		8CCEE802213076EF007B6261 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8CCEE80F2130804C007B6261 /* ReSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReSwift.framework; path = Carthage/Build/iOS/ReSwift.framework; sourceTree = "<group>"; };
+		8CCEE81321308268007B6261 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		8CCEE816213084B4007B6261 /* NewsReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsReducer.swift; sourceTree = "<group>"; };
+		8CCEE81C21308C7C007B6261 /* ImmutableStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImmutableStruct.swift; sourceTree = "<group>"; };
+		8CCEE81E21309463007B6261 /* ImmutableStruct.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImmutableStruct.generated.swift; sourceTree = "<group>"; };
+		8CCEE82021309646007B6261 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
+		8CCEE82221309A86007B6261 /* NewsReducerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsReducerTests.swift; sourceTree = "<group>"; };
+		8CCEE82421309D9E007B6261 /* AutoEquatable.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoEquatable.generated.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CCEE8102130804C007B6261 /* ReSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,8 +100,12 @@
 				8CCEE7F4213076EF007B6261 /* HesiJimboTests */,
 				8CCEE7FF213076EF007B6261 /* HesiJimboUITests */,
 				8CCEE7DB213076ED007B6261 /* Products */,
+				8CCEE80E2130804C007B6261 /* Frameworks */,
 			);
+			indentWidth = 4;
 			sourceTree = "<group>";
+			tabWidth = 2;
+			usesTabs = 1;
 		};
 		8CCEE7DB213076ED007B6261 /* Products */ = {
 			isa = PBXGroup;
@@ -99,13 +120,18 @@
 		8CCEE7DC213076ED007B6261 /* HesiJimbo */ = {
 			isa = PBXGroup;
 			children = (
+				8CCEE81B21308C6D007B6261 /* Core */,
+				8CCEE81A21308AA8007B6261 /* Templates */,
+				8CCEE81921308A9C007B6261 /* Generated */,
+				8CCEE812213081FB007B6261 /* Features */,
 				8CCEE7DD213076ED007B6261 /* AppDelegate.swift */,
-				8CCEE7DF213076ED007B6261 /* ViewController.swift */,
-				8CCEE7E1213076ED007B6261 /* Main.storyboard */,
 				8CCEE7E7213076EE007B6261 /* Assets.xcassets */,
-				8CCEE7E9213076EE007B6261 /* LaunchScreen.storyboard */,
-				8CCEE7EC213076EE007B6261 /* Info.plist */,
 				8CCEE7E4213076ED007B6261 /* HesiJimbo.xcdatamodeld */,
+				8CCEE7EC213076EE007B6261 /* Info.plist */,
+				8CCEE7E9213076EE007B6261 /* LaunchScreen.storyboard */,
+				8CCEE7E1213076ED007B6261 /* Main.storyboard */,
+				8CCEE81321308268007B6261 /* Store.swift */,
+				8CCEE7DF213076ED007B6261 /* ViewController.swift */,
 			);
 			path = HesiJimbo;
 			sourceTree = "<group>";
@@ -115,6 +141,7 @@
 			children = (
 				8CCEE7F5213076EF007B6261 /* HesiJimboTests.swift */,
 				8CCEE7F7213076EF007B6261 /* Info.plist */,
+				8CCEE82221309A86007B6261 /* NewsReducerTests.swift */,
 			);
 			path = HesiJimboTests;
 			sourceTree = "<group>";
@@ -128,6 +155,55 @@
 			path = HesiJimboUITests;
 			sourceTree = "<group>";
 		};
+		8CCEE80E2130804C007B6261 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8CCEE80F2130804C007B6261 /* ReSwift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8CCEE812213081FB007B6261 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				8CCEE81521308482007B6261 /* News */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
+		8CCEE81521308482007B6261 /* News */ = {
+			isa = PBXGroup;
+			children = (
+				8CCEE82021309646007B6261 /* News.swift */,
+				8CCEE816213084B4007B6261 /* NewsReducer.swift */,
+			);
+			path = News;
+			sourceTree = "<group>";
+		};
+		8CCEE81921308A9C007B6261 /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				8CCEE82421309D9E007B6261 /* AutoEquatable.generated.swift */,
+				8CCEE81E21309463007B6261 /* ImmutableStruct.generated.swift */,
+			);
+			path = Generated;
+			sourceTree = "<group>";
+		};
+		8CCEE81A21308AA8007B6261 /* Templates */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Templates;
+			sourceTree = "<group>";
+		};
+		8CCEE81B21308C6D007B6261 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				8CCEE81C21308C7C007B6261 /* ImmutableStruct.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,8 +211,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8CCEE805213076EF007B6261 /* Build configuration list for PBXNativeTarget "HesiJimbo" */;
 			buildPhases = (
+				8CCEE818213088F8007B6261 /* Sourcery */,
 				8CCEE7D6213076ED007B6261 /* Sources */,
 				8CCEE7D7213076ED007B6261 /* Frameworks */,
+				8CCEE8112130805C007B6261 /* Carthage */,
 				8CCEE7D8213076ED007B6261 /* Resources */,
 			);
 			buildRules = (
@@ -254,14 +332,53 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		8CCEE8112130805C007B6261 /* Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/ReSwift.framework",
+			);
+			name = Carthage;
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/ReSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+		8CCEE818213088F8007B6261 /* Sourcery */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Sourcery;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "sourcery --sources HesiJimbo --templates Templates --output HesiJimbo/Generated";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8CCEE7D6213076ED007B6261 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CCEE82521309D9E007B6261 /* AutoEquatable.generated.swift in Sources */,
 				8CCEE7E0213076ED007B6261 /* ViewController.swift in Sources */,
 				8CCEE7DE213076ED007B6261 /* AppDelegate.swift in Sources */,
 				8CCEE7E6213076ED007B6261 /* HesiJimbo.xcdatamodeld in Sources */,
+				8CCEE81F21309463007B6261 /* ImmutableStruct.generated.swift in Sources */,
+				8CCEE817213084B4007B6261 /* NewsReducer.swift in Sources */,
+				8CCEE82121309646007B6261 /* News.swift in Sources */,
+				8CCEE81421308268007B6261 /* Store.swift in Sources */,
+				8CCEE81D21308C7C007B6261 /* ImmutableStruct.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +387,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8CCEE7F6213076EF007B6261 /* HesiJimboTests.swift in Sources */,
+				8CCEE82321309A86007B6261 /* NewsReducerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,7 +553,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 46A8N9K87E;
+				DEVELOPMENT_TEAM = C974G5D47X;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = HesiJimbo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -453,7 +575,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 46A8N9K87E;
+				DEVELOPMENT_TEAM = C974G5D47X;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = HesiJimbo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
