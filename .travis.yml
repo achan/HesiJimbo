@@ -9,4 +9,4 @@ before_install:
   - brew install sourcery
 
 install:
-  - carthage build --platform ios
+  - carthage update --platform ios
