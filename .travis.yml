@@ -1,7 +1,7 @@
 language: objective-c
 os: osx
 xcode_project: HesiJimbo.xcodeproj
-xcode_scheme: HesiJimboTests
+xcode_scheme: HesiJimbo
 xcode_destination: platform=iOS Simulator,OS=11.4,name=iPhone X
 
 before_install:
