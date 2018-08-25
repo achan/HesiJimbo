@@ -13,7 +13,6 @@
 		8CCEE7E6213076ED007B6261 /* HesiJimbo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8CCEE7E4213076ED007B6261 /* HesiJimbo.xcdatamodeld */; };
 		8CCEE7E8213076EE007B6261 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CCEE7E7213076EE007B6261 /* Assets.xcassets */; };
 		8CCEE7EB213076EE007B6261 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CCEE7E9213076EE007B6261 /* LaunchScreen.storyboard */; };
-		8CCEE7F6213076EF007B6261 /* HesiJimboTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCEE7F5213076EF007B6261 /* HesiJimboTests.swift */; };
 		8CCEE801213076EF007B6261 /* HesiJimboUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCEE800213076EF007B6261 /* HesiJimboUITests.swift */; };
 		8CCEE8102130804C007B6261 /* ReSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CCEE80F2130804C007B6261 /* ReSwift.framework */; };
 		8CCEE81421308268007B6261 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCEE81321308268007B6261 /* Store.swift */; };
@@ -52,7 +51,6 @@
 		8CCEE7EA213076EE007B6261 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8CCEE7EC213076EE007B6261 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8CCEE7F1213076EF007B6261 /* HesiJimboTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HesiJimboTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8CCEE7F5213076EF007B6261 /* HesiJimboTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HesiJimboTests.swift; sourceTree = "<group>"; };
 		8CCEE7F7213076EF007B6261 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8CCEE7FC213076EF007B6261 /* HesiJimboUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HesiJimboUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CCEE800213076EF007B6261 /* HesiJimboUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HesiJimboUITests.swift; sourceTree = "<group>"; };
@@ -139,7 +137,6 @@
 		8CCEE7F4213076EF007B6261 /* HesiJimboTests */ = {
 			isa = PBXGroup;
 			children = (
-				8CCEE7F5213076EF007B6261 /* HesiJimboTests.swift */,
 				8CCEE7F7213076EF007B6261 /* Info.plist */,
 				8CCEE82221309A86007B6261 /* NewsReducerTests.swift */,
 			);
@@ -386,7 +383,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8CCEE7F6213076EF007B6261 /* HesiJimboTests.swift in Sources */,
 				8CCEE82321309A86007B6261 /* NewsReducerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
