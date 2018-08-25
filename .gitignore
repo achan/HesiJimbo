@@ -117,3 +117,5 @@ tags
 
 
 # End of https://www.gitignore.io/api/vim,xcode,swift,carthage
+
+HesiJimbo/Generated
