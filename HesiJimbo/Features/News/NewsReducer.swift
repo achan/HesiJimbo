@@ -4,14 +4,6 @@ struct NewsState: StateType, ImmutableStruct {
 	let items: [News]
 }
 
-struct SetNews: Action, ImmutableStruct {
-	let items: [News]
-}
-
-struct AppendNews: Action, ImmutableStruct {
-    let items: [News]
-}
-
 struct NewsReducer {
 	func reduce(action: Action, state: NewsState?) -> NewsState {
 		let state = state ?? NewsState(items: [])

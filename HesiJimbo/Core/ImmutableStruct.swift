@@ -1,2 +1,1 @@
 protocol ImmutableStruct { }
-protocol AutoEquatable { }
