@@ -14,6 +14,10 @@
 		8C22914A21323A2900705827 /* RedditActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C22914921323A2900705827 /* RedditActions.swift */; };
 		8C22914D2132410800705827 /* RedditListing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C22914C2132410800705827 /* RedditListing.swift */; };
 		8C22914F2132454500705827 /* RedditListings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C22914E2132454500705827 /* RedditListings.swift */; };
+		8C229151213388BF00705827 /* StoreSubscriberTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C229150213388BF00705827 /* StoreSubscriberTests.swift */; };
+		8C22915221338B7A00705827 /* ReSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CCEE80F2130804C007B6261 /* ReSwift.framework */; };
+		8C22915521339A0700705827 /* MockSubscriber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C22915421339A0700705827 /* MockSubscriber.swift */; };
+		8C22915721339A4C00705827 /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C22915621339A4C00705827 /* TestHelpers.swift */; };
 		8CCEE7DE213076ED007B6261 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCEE7DD213076ED007B6261 /* AppDelegate.swift */; };
 		8CCEE7E0213076ED007B6261 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCEE7DF213076ED007B6261 /* ViewController.swift */; };
 		8CCEE7E3213076ED007B6261 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CCEE7E1213076ED007B6261 /* Main.storyboard */; };
@@ -56,6 +60,9 @@
 		8C22914921323A2900705827 /* RedditActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedditActions.swift; sourceTree = "<group>"; };
 		8C22914C2132410800705827 /* RedditListing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedditListing.swift; sourceTree = "<group>"; };
 		8C22914E2132454500705827 /* RedditListings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedditListings.swift; sourceTree = "<group>"; };
+		8C229150213388BF00705827 /* StoreSubscriberTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreSubscriberTests.swift; sourceTree = "<group>"; };
+		8C22915421339A0700705827 /* MockSubscriber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSubscriber.swift; sourceTree = "<group>"; };
+		8C22915621339A4C00705827 /* TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHelpers.swift; sourceTree = "<group>"; };
 		8CCEE7DA213076ED007B6261 /* HesiJimbo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HesiJimbo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CCEE7DD213076ED007B6261 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8CCEE7DF213076ED007B6261 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -92,6 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C22915221338B7A00705827 /* ReSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,6 +122,14 @@
 				8C2291472132395200705827 /* RedditMiddleware.swift */,
 			);
 			path = Reddit;
+			sourceTree = "<group>";
+		};
+		8C229153213399F800705827 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				8C22915421339A0700705827 /* MockSubscriber.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 		8CCEE7D1213076ED007B6261 = {
@@ -162,8 +178,11 @@
 		8CCEE7F4213076EF007B6261 /* HesiJimboTests */ = {
 			isa = PBXGroup;
 			children = (
+				8C229153213399F800705827 /* Mocks */,
 				8CCEE7F7213076EF007B6261 /* Info.plist */,
 				8CCEE82221309A86007B6261 /* NewsReducerTests.swift */,
+				8C229150213388BF00705827 /* StoreSubscriberTests.swift */,
+				8C22915621339A4C00705827 /* TestHelpers.swift */,
 			);
 			path = HesiJimboTests;
 			sourceTree = "<group>";
@@ -411,7 +430,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C22915521339A0700705827 /* MockSubscriber.swift in Sources */,
 				8CCEE82321309A86007B6261 /* NewsReducerTests.swift in Sources */,
+				8C229151213388BF00705827 /* StoreSubscriberTests.swift in Sources */,
+				8C22915721339A4C00705827 /* TestHelpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -623,6 +645,10 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 46A8N9K87E;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = HesiJimboTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -644,6 +670,10 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 46A8N9K87E;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = HesiJimboTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

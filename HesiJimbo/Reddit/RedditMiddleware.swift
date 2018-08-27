@@ -2,7 +2,7 @@ import ReSwift
 import Foundation
 
 class RedditMiddleware {
-	let session: URLSession
+	private let session: URLSession
 
 	init(session: URLSession) {
 		self.session = session
@@ -16,17 +16,21 @@ class RedditMiddleware {
 						return next(action)
 					}
 
-					switch (action) {
-					case let action as FetchListings:
-						strongSelf.fetchListings(action: action, dispatch: dispatch)
-					default:
-						break
-					}
-
-					return next(action)
+					strongSelf.handle(action: action, dispatch: dispatch, getState: getState, next: next)
 				}
 			}
 		}
+	}
+
+	func handle(action: Action, dispatch: @escaping DispatchFunction, getState: () -> AppState?, next: DispatchFunction) {
+		switch (action) {
+		case let action as FetchListings:
+			fetchListings(action: action, dispatch: dispatch)
+		default:
+			break
+		}
+
+		return next(action)
 	}
 
 	private func fetchListings(action: FetchListings, dispatch: @escaping DispatchFunction) {
