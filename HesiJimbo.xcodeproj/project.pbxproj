@@ -24,7 +24,6 @@
 		8CCEE7E6213076ED007B6261 /* HesiJimbo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8CCEE7E4213076ED007B6261 /* HesiJimbo.xcdatamodeld */; };
 		8CCEE7E8213076EE007B6261 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CCEE7E7213076EE007B6261 /* Assets.xcassets */; };
 		8CCEE7EB213076EE007B6261 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CCEE7E9213076EE007B6261 /* LaunchScreen.storyboard */; };
-		8CCEE801213076EF007B6261 /* HesiJimboUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCEE800213076EF007B6261 /* HesiJimboUITests.swift */; };
 		8CCEE8102130804C007B6261 /* ReSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CCEE80F2130804C007B6261 /* ReSwift.framework */; };
 		8CCEE81421308268007B6261 /* StoreCreator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCEE81321308268007B6261 /* StoreCreator.swift */; };
 		8CCEE817213084B4007B6261 /* NewsReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CCEE816213084B4007B6261 /* NewsReducer.swift */; };
@@ -74,7 +73,6 @@
 		8CCEE7F1213076EF007B6261 /* HesiJimboTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HesiJimboTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CCEE7F7213076EF007B6261 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8CCEE7FC213076EF007B6261 /* HesiJimboUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HesiJimboUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8CCEE800213076EF007B6261 /* HesiJimboUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HesiJimboUITests.swift; sourceTree = "<group>"; };
 		8CCEE802213076EF007B6261 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8CCEE80F2130804C007B6261 /* ReSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReSwift.framework; path = Carthage/Build/iOS/ReSwift.framework; sourceTree = "<group>"; };
 		8CCEE81321308268007B6261 /* StoreCreator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreCreator.swift; sourceTree = "<group>"; };
@@ -190,7 +188,6 @@
 		8CCEE7FF213076EF007B6261 /* HesiJimboUITests */ = {
 			isa = PBXGroup;
 			children = (
-				8CCEE800213076EF007B6261 /* HesiJimboUITests.swift */,
 				8CCEE802213076EF007B6261 /* Info.plist */,
 			);
 			path = HesiJimboUITests;
@@ -249,6 +246,7 @@
 			buildConfigurationList = 8CCEE805213076EF007B6261 /* Build configuration list for PBXNativeTarget "HesiJimbo" */;
 			buildPhases = (
 				8CCEE818213088F8007B6261 /* Sourcery */,
+				8C22915821339DDE00705827 /* SwiftLint */,
 				8CCEE7D6213076ED007B6261 /* Sources */,
 				8CCEE7D7213076ED007B6261 /* Frameworks */,
 				8CCEE8112130805C007B6261 /* Carthage */,
@@ -370,6 +368,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		8C22915821339DDE00705827 /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
 		8CCEE8112130805C007B6261 /* Carthage */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -441,7 +453,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8CCEE801213076EF007B6261 /* HesiJimboUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

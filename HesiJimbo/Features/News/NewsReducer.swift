@@ -13,7 +13,7 @@ struct NewsReducer {
 			break
 		case let action as SetNews:
 			return state.items(action.items)
-        case let action as AppendNews:
+		case let action as AppendNews:
             return state.items(state.items + action.items)
 		default:
 			break

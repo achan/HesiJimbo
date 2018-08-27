@@ -4,7 +4,7 @@ class NewsMiddleware {
 	let handle: Middleware<AppState> = { dispatch, getState in
 		return { next in
 			return { action in
-				switch (action) {
+				switch action {
 				case let action as FetchNews:
 					next(FetchListings(page: action.page))
 				case let action as RequestSuccess:

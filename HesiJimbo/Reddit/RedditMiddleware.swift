@@ -23,7 +23,7 @@ class RedditMiddleware {
 	}
 
 	func handle(action: Action, dispatch: @escaping DispatchFunction, getState: () -> AppState?, next: DispatchFunction) {
-		switch (action) {
+		switch action {
 		case let action as FetchListings:
 			fetchListings(action: action, dispatch: dispatch)
 		default:
@@ -45,8 +45,7 @@ class RedditMiddleware {
 				let decoder = JSONDecoder()
 				let listings = try decoder.decode(RedditListings.self, from: data)
 				dispatch(RequestSuccess(response: listings, action: action))
-			}
-			catch let error {
+			} catch let error {
 				print("Failed to fetch listings: \(error.localizedDescription)")
 			}
 			}.resume()
